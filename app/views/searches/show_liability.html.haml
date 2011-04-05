@@ -1,0 +1,12 @@
+%h1 Total CRC Liability
+%p
+  The total amount of
+  %strong
+    = raw "<span class='quantity'>#{sprintf("%.2f",@total_result)} #{'tonnes'}</span> of <span class='metric'>#{'CO2'}</span>"
+  has a liabilility of
+  %strong
+    = result = "£%.2f" % (@total_result * @cost_per_tonne)
+    -#= sprintf("£%8.2f", @total_result * @cost_per_tonne) #same as above but with leading space
+%ul
+  %li
+    = link_to "Calculate Again", new_crc_calculator_path, :class => "submit"

@@ -1,0 +1,65 @@
+%h1 Report Metrics
+%h2 Core Emissions
+%table.calculator
+  %tr
+    %th Fuel Source
+    %th Energy supplied
+    %th.titleUnits Measurement units
+    %th.titleTonnes Calculated emissions (tonnes CO2)
+  %tr
+    %td.inputLabel= form.label :core_electricity
+    %td= form.text_field :core_electricity, :size => 10
+    %td.titleCentered kWh
+    %td#core_electricity.titleDecimalAlign 0.000000
+  %tr
+    %td.inputLabel= form.label :core_natural_gas
+    %td= form.text_field :core_natural_gas, :size => 10
+    %td.titleCentered kWh
+    %td#core_natural_gas.titleDecimalAlign 0.000000
+%h2 Other Fuels
+%table.calculator
+  %tr
+    %th Fuel Source
+    %th Energy supplied
+    %th.titleUnits Measurement units
+    %th.titleTonnes Calculated emissions (tonnes CO2)
+  %tr
+    %td.inputLabel= form.label :non_core_electricity
+    %td= form.text_field :non_core_electricity,:size => 10
+    %td.titleCentered kWh
+    %td#non_core_electricity.titleDecimalAlign 0.000000
+  %tr
+    %td.inputLabel= form.label :non_core_natural_gas
+    %td= form.text_field :non_core_natural_gas, :size => 10
+    %td.titleCentered kWh
+    %td#non_core_natural_gas.titleDecimalAlign  0.000000
+  - @other_fuels.each do |var|
+    %tr
+      %td.inputLabel= form.label var[0]
+      %td= form.text_field var[0], :size => 10
+      %td.titleCentered= var[1]
+      %td{:id => var[0], :class => "titleDecimalAlign"} 0.000000
+  %tr
+    %td
+      %br
+      %strong= form.label :total_emissions
+    %td
+    %td
+    %td#total_result.titleDecimalAlign 0.000000
+
+   ==============
+   
+    %p
+  These values produce an output of
+  = raw "<span class='quantity'>#{sprintf("%.6f",@crc_calculator.co2/1000)} #{'tonnes'}</span> of <span class='metric'>#{'CO2'}</span>"
+
+%ul
+  %li
+    = link_to "Calculate Again", new_crc_calculator_path, :class => "submit"
+
+%p
+  Source Information: Click Link Below to View
+%ul
+  %li
+    - @crc_calculator.source_links.uniq.each_with_index do |link, index|
+      = link_to "Source Information: #{index+1}", link, :target => "_blank"
