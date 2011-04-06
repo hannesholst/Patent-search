@@ -54,7 +54,7 @@ class SearchesController < ApplicationController
       end
 
       #can the hash be nul?
-      if results_array.size > 0 then
+      if !results_array.nil? and results_array.size > 0 then
         publication = Array.new
         results_array.each do |document_container|
           pub_element = Hash.new
@@ -111,7 +111,11 @@ class SearchesController < ApplicationController
 
         @search.results = publication if publication.size > 0
       end
-        varstop = 1
+      varstop = 1
+
+
+    #Downloading images for patents
+    
     end
 
     respond_to do |format|
