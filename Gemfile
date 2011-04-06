@@ -37,10 +37,10 @@ group :development, :test do
 
   gem 'nokogiri'
   gem 'pickle'
-  gem 'autotest'
-  gem 'autotest-notification'
-  gem 'autotest-rails-pure'
+#  gem 'autotest'
+#  gem 'autotest-notification'
+#  gem 'autotest-rails-pure'
+#  gem 'heroku'
 #  gem 'redgreen'
-  gem 'heroku'
 end
 
