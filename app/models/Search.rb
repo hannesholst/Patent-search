@@ -3,7 +3,7 @@ class Search
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :query, :last_query, :response, :hits, :response_time, :range
+  attr_accessor :query, :last_query, :response, :hits, :response_time, :range, :results
   
   def initialize(attributes = {})
     attributes.each do |name, value|

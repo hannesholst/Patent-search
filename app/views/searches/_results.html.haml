@@ -9,10 +9,12 @@
     %th Applicant
     %th Priority Date
     %th First Page Image
-  -#%tr
-  -#  %td.inputLabel= form.label :core_electricity
-  -#  %td= form.text_field :core_electricity, :size => 10
-  -#  %td.titleCentered kWh
-  -#  %td#core_electricity.titleDecimalAlign 0.000000
-%p
-  = @search.response
+  -unless @search.results.nil?
+    -@search.results.each do |result|
+      %tr
+        %td= result[:id]
+        %td= result[:applicant]
+        %td= result[:priority_date]
+        %td an image
+-#%p
+-#  = @search.response
