@@ -10,6 +10,9 @@ gem "haml", ">= 3.0.25"
 gem "nifty-generators", :group => :development
 gem 'cucumber-rails', :group => :test
 gem "jquery-rails"
+#gem "httparty"
+gem "rest-client"
+gem "crack"
 
 group :test do
   gem "database_cleaner", "0.6"
@@ -34,5 +37,10 @@ group :development, :test do
 
   gem 'nokogiri'
   gem 'pickle'
+  gem 'autotest'
+  gem 'autotest-notification'
+  gem 'autotest-rails-pure'
+#  gem 'redgreen'
+  gem 'heroku'
 end
 

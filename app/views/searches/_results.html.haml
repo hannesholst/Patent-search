@@ -1,8 +1,8 @@
-%p About 859,000,000 results (0.17 seconds)
+%p= "#{@search.hits} results (#{@search.response_time} seconds)"
 %p
-  Results for
+  = "Showing #{@search.range} results for "
   %b
-    =" #{@search.query}"
+    =" #{@search.last_query}"
 %table.calculator
   %tr
     %th Document ID
@@ -14,3 +14,5 @@
   -#  %td= form.text_field :core_electricity, :size => 10
   -#  %td.titleCentered kWh
   -#  %td#core_electricity.titleDecimalAlign 0.000000
+%p
+  = @search.response
