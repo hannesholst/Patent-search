@@ -37,6 +37,9 @@ group :development, :test do
 
   gem 'nokogiri'
   gem 'pickle'
+  gem 'ruby_parser'
+  gem 'file-tail'
+  gem 'sourcify'
 #  gem 'autotest'
 #  gem 'autotest-notification'
 #  gem 'autotest-rails-pure'
