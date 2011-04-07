@@ -20,28 +20,4 @@
 -#%p
 -#  = @search.response
 
-%p
-  - if @search.hits then number_pages = @search.hits.to_i / 25 else number_pages = 0
-  - if number_pages > 10 then upper_limit = 10 else upper_limit = number_pages
-  - if @page > 1
-    = link_to 'previous', searches_path + "?query=#{@search.last_query}&&page=#{@page-1}", {:method => :post}
-  &nbsp&nbsp&nbsp
-  - if number_pages > 2
-    - if @page < 10
-      - (1..upper_limit).each do |i|
-        - if @page == i
-          = i
-        -else
-          = link_to "#{i}", searches_path + "?query=#{@search.last_query}&&page=#{i}", {:method => :post}
-    -else
-      -#- upper_limit = if (@page+10) > number_pages
-      -#  = number_pages
-      -#-else
-      - upper_limit = @page + 9
-      - ((@page-9)..upper_limit).each do |i|
-        - if @page == i
-          = i
-        -else
-          = link_to "#{i}", searches_path + "?query=#{@search.last_query}&&page=#{i}", {:method => :post}
-    &nbsp&nbsp&nbsp
-    = link_to 'next', searches_path + "?query=#{@search.last_query}&&page=#{@page+1}", {:method => :post}
+=render :partial => "pagination", :locals => {:search => @search, :page => @page}
