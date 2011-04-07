@@ -29,6 +29,15 @@ class SearchesController < ApplicationController
       query_string = @search.query
     end
 
+    if query_string.empty?
+      flash[:error] = "Empty Search"
+      @search.last_query = "empty query"
+      @search.hits = 0
+      @search.response_time = 0
+      @search.range = "0"
+      return
+    end
+    
     begin
       #http://ops.epo.org/2.6.2/rest-services/published-data/search?q=applicant%3DIBM
       url_encoded_string = CGI::escape(query_string)
@@ -56,13 +65,13 @@ class SearchesController < ApplicationController
       publications = get_publications
       @search.results = publications if publications
       #page(params[:page]).per(5)
+      get_images()
     end
 
     #Downloading images for patents
     #GET http://ops.epo.org/2.6.2/rest-services/published-data/publication/epodoc/EP1000000.A1/images
     #GET http://ops.epo.org/2.6.2/rest-services/published-data/publication/docdb/US.2011074386.A1/images
 
-    get_images()
 
     #resource = RestClient::Resource.new \
     #"http://ops.epo.org/2.6.2/rest-services/published-data/publication/docdb/US.2011074386.A1/images"
