@@ -13,6 +13,7 @@ gem "jquery-rails"
 #gem "httparty"
 gem "rest-client"
 gem "crack"
+gem 'sourcify'
 
 group :test do
   gem "database_cleaner", "0.6"
@@ -39,7 +40,7 @@ group :development, :test do
   gem 'pickle'
   gem 'ruby_parser'
   gem 'file-tail'
-  gem 'sourcify'
+
 #  gem 'autotest'
 #  gem 'autotest-notification'
 #  gem 'autotest-rails-pure'
