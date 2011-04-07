@@ -15,18 +15,30 @@ class SearchesController < ApplicationController
 
   def create
     require 'crack'
+    page = params[:page] || 1
+    @page = page.to_i
+    logger.debug "showing page: #{@page}"
+    page_start = ( (@page-1) * 25 ) + 1
+    page_end = ( (@page-1) * 25) + 25
 
-    @search = Search.new params[:search]
+    if params.has_key?(:query)
+       query_string = params[:query] || ""
+       @search = Search.new
+    else
+      @search = Search.new params[:search]
+      query_string = @search.query
+    end
+
     begin
       #http://ops.epo.org/2.6.2/rest-services/published-data/search?q=applicant%3DIBM
-      url_encoded_string = CGI::escape(@search.query)
+      url_encoded_string = CGI::escape(query_string)
       resource = RestClient::Resource.new \
-        "http://ops.epo.org/2.6.2/rest-services/published-data/search/biblio?q=#{url_encoded_string}"
+        "http://ops.epo.org/2.6.2/rest-services/published-data/search/biblio?q=#{url_encoded_string}&range=#{page_start}-#{page_end}"
       @search.response = resource.get
       #logger.debug @search.response
       #logger.debug "Api returned: #{@search.response.code}"
     rescue RestClient::BadRequest
-      @search.last_query = @search.query
+      @search.last_query = query_string
       @search.hits = 0
       @search.response_time = 0
       @search.range = "0"
@@ -38,11 +50,12 @@ class SearchesController < ApplicationController
       @search.hits = @doc['ops:world_patent_data']['ops:biblio_search']['total_result_count']
       response_elapsed_time = @doc['ops:world_patent_data']['ops:meta']['value']
       @search.response_time = response_elapsed_time.to_f / 1000 if response_elapsed_time
-      range_start = @doc['ops:world_patent_data']['ops:biblio_search']['ops:range']['begin']
-      range_end = @doc['ops:world_patent_data']['ops:biblio_search']['ops:range']['end']
-      @search.range = "#{range_start} to #{range_end}"
+      @search.range_start = @doc['ops:world_patent_data']['ops:biblio_search']['ops:range']['begin']
+      @search.range_end = @doc['ops:world_patent_data']['ops:biblio_search']['ops:range']['end']
+      @search.range = "#{@search.range_start} to #{@search.range_end}"
       publications = get_publications
       @search.results = publications if publications
+      #page(params[:page]).per(5)
     end
 
     #Downloading images for patents

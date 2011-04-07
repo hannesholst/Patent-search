@@ -13,7 +13,8 @@ gem "jquery-rails"
 #gem "httparty"
 gem "rest-client"
 gem "crack"
-gem 'sourcify'
+gem 'sourcify' #remove this gem for better performance in production (used in debug)
+#gem 'kaminari'
 
 group :test do
   gem "database_cleaner", "0.6"
