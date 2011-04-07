@@ -37,7 +37,7 @@
       -#- upper_limit = if (@page+10) > number_pages
       -#  = number_pages
       -#-else
-      = upper_limit = @page + 10
+      - upper_limit = @page + 9
       - ((@page-9)..upper_limit).each do |i|
         - if @page == i
           = i
