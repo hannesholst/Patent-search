@@ -102,10 +102,10 @@ module SearchesHelper
       pub_element[:priority_date] = if element_valid?
         first_priority = if priority.is_a? Array
           retrieve_element {
-            if priority['document_id'].is_a? Array
-              priority['document_id'][0]['date']
+            if priority[0]['document_id'].is_a? Array
+              priority[0]['document_id'][0]['date']
             else
-              priority['document_id']['date']
+              priority[0]['document_id']['date']
             end
           }
           else
