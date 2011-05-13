@@ -22,6 +22,12 @@ Rspec.configure do |config|
    
    config.filter_run :focus => true
    config.run_all_when_everything_filtered = true
+  
+  # Gives you 'use_vcr_cassette' as a macro
+   config.extend VCR::RSpec::Macros
 end
 
-
+# spec/spec_helper.rb
+require 'webmock/rspec'
+#require 'webmock'
+require 'vcr'

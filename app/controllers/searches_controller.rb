@@ -65,7 +65,7 @@ class SearchesController < ApplicationController
       publications = get_publications
       @search.results = publications if publications
       #page(params[:page]).per(5)
-      get_images()
+#      get_images()
     end
 
     #Downloading images for patents

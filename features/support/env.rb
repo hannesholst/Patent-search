@@ -73,3 +73,15 @@ Dir[File.expand_path(File.join(File.dirname(__FILE__),'..','..',
 #  rescue LoadError => ignore_if_database_cleaner_not_present
 #  end
 #end
+
+# features/support/env.rb
+require 'webmock/cucumber'
+require 'vcr'
+#require 'webmock'
+
+VCR.config do |c|
+  c.cassette_library_dir = 'fixtures/cassette_library'
+  c.stub_with :webmock
+  c.ignore_localhost = true
+  c.default_cassette_options = { :record => :new_episodes } #:once  :new_episodes  :none
+end

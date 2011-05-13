@@ -61,7 +61,7 @@ module SearchesHelper
       pub_element[:id] = if element_valid?
          "#{pub['country']} #{pub['doc_number']} #{pub['kind']}"
       else
-        "Not found"
+        "Not found - exch doc"
       end
 
       applicant = retrieve_element {
@@ -76,28 +76,50 @@ module SearchesHelper
         first_applicant = retrieve_element {
           applicant['applicant'][0]['applicant_name']['name']
         }
-        element_valid? ? first_applicant : "Not found"
+        element_valid? ? first_applicant : "Not found - appli element"
       else
-        "Not found"
+        "Not found - appl array"
       end
 
       #Retrieving Priority Date
       priority = retrieve_element {
-        pub['bibliographic_data']['priority_claims']['priority_claim']
+        #this needs to be updated to an array.
+        #there could be: pub['bibliographic_data']['priority_claims']['0']['priority_claim']
+
+        pub['bibliographic_data']['priority_claims']
       }
+
+      priority = if priority.is_a? Array
+        retrieve_element {
+          priority [0]
+        }
+      else
+        retrieve_element {
+          priority ['priority_claim']
+        }
+      end
+
       pub_element[:priority_date] = if element_valid?
         first_priority = if priority.is_a? Array
           retrieve_element {
-            priority[0]['document_id'][0]['date']
+            if priority['document_id'].is_a? Array
+              priority['document_id'][0]['date']
+            else
+              priority['document_id']['date']
+            end
           }
           else
           retrieve_element {
-            priority['document_id'][0]['date']
+            if priority['document_id'].is_a? Array
+              priority['document_id'][0]['date']
+            else
+              priority['document_id']['date']
+            end
           }
         end
-        element_valid? ? first_priority : "Not found"
+        element_valid? ? first_priority : "Not found - prio date on 1st"
       else
-        "Not found"
+        "Not found - prio claim"
       end
 
       publication << pub_element

@@ -37,12 +37,14 @@ When /^(?:|I )follow "([^"]*)"(?: within "([^"]*)")?$/ do |link, selector|
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"(?: within "([^"]*)")?$/ do |field, value, selector|
+  @last_input_text = value
   with_scope(selector) do
     fill_in(field, :with => value)
   end
 end
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"(?: within "([^"]*)")?$/ do |value, field, selector|
+  @last_input_text = value
   with_scope(selector) do
     fill_in(field, :with => value)
   end
