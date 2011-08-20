@@ -32,7 +32,7 @@ module SearchesHelper
     #resultsHash = @doc['ops:world_patent_data']['ops:biblio_search']['ops:search_result']['ops:publication_reference']
 
     result_search = retrieve_element {
-       @doc['ops:world_patent_data']['ops:biblio_search']['exchange_documents']
+       @doc['ops:world_patent_data']['ops:biblio_search']['ops:search_result']['exchange_documents']
     }
 
     return nil if element_invalid?
