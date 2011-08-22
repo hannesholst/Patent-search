@@ -19,12 +19,11 @@ class Search
   end
   
   def createList
-	resultList = Resultlist.new
 	count = 0
 	results.each do |result|
 	  if (count < 5)
 		newPatent = Patent.new(result[:id],result[:applicant],result[:priority_year],"","")
-		resultList.push(newPatent)
+		
 	  end
 	  count = count+1
 	end

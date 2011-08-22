@@ -1,10 +1,8 @@
 class Resultlist
-	#Declare getters/setters for resultlist
-	attr_accessor :resultlist
+	attr_accessor :list
 	
-	#Default constructor for variable number of patents
-	def initialize()
-		@@resultlist = Array.new(5)
+	initialize()
+		@list = Array.new(5)
 	end
 	
 end

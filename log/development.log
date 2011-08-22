@@ -11695,3 +11695,113 @@ ActionView::Template::Error (undefined method `push' for #<Resultlist:0x131e8f0>
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (55.0ms)
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (110.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-22 16:45:25 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSX4hbpdf9sY3fdBDMS87DonXRy2x3fjIOyGI2qvrp4=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (42.0ms)
+Rendered searches/create.html.haml within layouts/application (80.0ms)
+Completed   in 2940ms
+
+ActionView::Template::Error (undefined method `list' for Resultlist:Class):
+    14:     %th First Page Image
+    15:   
+    16:   //Create a list with the first 5 patents from the query
+    17:   #{@search.createList}
+    18:   -unless @search.results.nil?
+    19:     -@search.results.each do |result|
+    20:       %tr
+  app/models/Search.rb:26:in `block in createList'
+  app/models/Search.rb:23:in `each'
+  app/models/Search.rb:23:in `createList'
+  app/views/searches/_results.html.haml:17:in `_app_views_searches__results_html_haml___1047770781_16918812_593691032'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml__360197208_22585212_19367110'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml__360197208_22585212_19367110'
+  app/controllers/searches_controller.rb:83:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (57.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (111.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-22 16:46:00 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSX4hbpdf9sY3fdBDMS87DonXRy2x3fjIOyGI2qvrp4=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (43.0ms)
+Rendered searches/create.html.haml within layouts/application (79.0ms)
+Completed   in 1498ms
+
+ActionView::Template::Error (undefined method `list' for Resultlist:Class):
+    14:     %th First Page Image
+    15:   
+    16:   //Create a list with the first 5 patents from the query
+    17:   #{@search.createList}
+    18:   -unless @search.results.nil?
+    19:     -@search.results.each do |result|
+    20:       %tr
+  app/models/Search.rb:26:in `block in createList'
+  app/models/Search.rb:23:in `each'
+  app/models/Search.rb:23:in `createList'
+  app/views/searches/_results.html.haml:17:in `_app_views_searches__results_html_haml___1047770781_16536588_593691032'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml__360197208_22498728_19367110'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml__360197208_22498728_19367110'
+  app/controllers/searches_controller.rb:83:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (55.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (109.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-22 16:46:48 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSX4hbpdf9sY3fdBDMS87DonXRy2x3fjIOyGI2qvrp4=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (4.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (60.0ms)
+Rendered searches/create.html.haml within layouts/application (104.0ms)
+Completed 200 OK in 1490ms (Views: 146.0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-08-22 16:46:52 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/index.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 77ms (Views: 76.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-22 16:47:18 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/index.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-22 16:47:22 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-22 16:47:22 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSX4hbpdf9sY3fdBDMS87DonXRy2x3fjIOyGI2qvrp4=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (59.0ms)
+Rendered searches/create.html.haml within layouts/application (105.0ms)
+Completed 200 OK in 1472ms (Views: 147.0ms)

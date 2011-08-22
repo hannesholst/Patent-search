@@ -64,6 +64,7 @@ class SearchesController < ApplicationController
       @search.range = "#{@search.range_start} to #{@search.range_end}"
       publications = get_publications
       @search.results = publications if publications
+	  @search.createList
       #page(params[:page]).per(5)
 #      get_images()
     end
