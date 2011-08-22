@@ -3,6 +3,8 @@
   = "Showing #{@search.range} results for "
   %b
     =" #{@search.last_query}"
+  = "   |   "
+  = link_to "Export to pdf", #{@search.createPdf}
   -#= paginate @search.results
 %table.calculator
   %tr
@@ -10,6 +12,9 @@
     %th Applicant
     %th Priority Date
     %th First Page Image
+  
+  //Create a list with the first 5 patents from the query
+  #{@search.createList}
   -unless @search.results.nil?
     -@search.results.each do |result|
       %tr
@@ -17,6 +22,8 @@
         %td= result[:applicant]
         %td= result[:priority_date]
         %td an image
+
+
 -#%p
 -#  = @search.response
 
