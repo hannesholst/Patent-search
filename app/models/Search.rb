@@ -2,6 +2,8 @@ class Search
   include ActiveModel::Validations
   include ActiveModel::Conversion
   extend ActiveModel::Naming
+  require 'Resultlist'
+  require 'Patent'
   
   attr_accessor :query,
                 :last_query,:range,
@@ -17,11 +19,11 @@ class Search
   
   def createList
 	count = 0
-	resultList = Resultlist.new()
+	testing = Resultlist.new
 	@results.each do |result|
 	  if (count < 5)
 		newPatent = Patent.new(result[:id],result[:applicant],result[:priority_year],"","")
-		resultList.list.push(newPatent)
+		testing.setArray(newPatent)
 	  end
 	  count = count+1
 	end
