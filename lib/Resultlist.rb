@@ -18,6 +18,9 @@ class Resultlist
 		(0..4).each { |i|
 			pdf.move_down 50
 			pdf.text @@list[i].title, :align => :center, :size => 30, :style => :bold
+			pdf.move_down 20
+			pdf.text @@list[i].priorityYear, :align => :center, :size => 30, :style => :bold
+			pdf.move_down 20
 			unless i==4
 				pdf.start_new_page
 			end
