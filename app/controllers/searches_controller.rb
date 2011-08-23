@@ -66,9 +66,9 @@ class SearchesController < ApplicationController
       @search.results = publications if publications
 	  @search.createList
       #page(params[:page]).per(5)
-#      get_images()
+	  #get_images()
     end
-
+	  
     #Downloading images for patents
     #GET http://ops.epo.org/2.6.2/rest-services/published-data/publication/epodoc/EP1000000.A1/images
     #GET http://ops.epo.org/2.6.2/rest-services/published-data/publication/docdb/US.2011074386.A1/images
