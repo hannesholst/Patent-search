@@ -2,8 +2,9 @@ class Search
   include ActiveModel::Validations
   include ActiveModel::Conversion
   extend ActiveModel::Naming
-  require 'Resultlist'
+  
   require 'Patent'
+  require 'Resultlist'
   
   attr_accessor :query,
                 :last_query,:range,

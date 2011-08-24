@@ -19,13 +19,13 @@ class Resultlist
 			pdf.move_down 50
 			pdf.text @@list[i].title, :align => :center, :size => 30, :style => :bold
 			pdf.move_down 20
-			pdf.text @@list[i].priorityYear, :align => :center, :size => 30, :style => :bold
+			pdf.text @@list[i].link, :align => :center, :size => 30, :style => :bold
 			pdf.move_down 20
 			unless i==4
 				pdf.start_new_page
 			end
 		}
-		pdf.render_file "presentation.pdf"
+		pdf.render_file "#{Rails.root}/tmp/presentation.pdf"
 		return
 	end
 end

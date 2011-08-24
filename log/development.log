@@ -15558,3 +15558,994 @@ Rendered searches/_pagination.html.haml (7.0ms)
 Rendered searches/_results.html.haml (189.0ms)
 Rendered searches/create.html.haml within layouts/application (232.0ms)
 Completed 200 OK in 1639ms (Views: 273.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:18:53 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 77ms (Views: 77.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:19:03 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:19:03 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (8.0ms)
+Rendered searches/_results.html.haml (219.0ms)
+Rendered searches/create.html.haml within layouts/application (266.0ms)
+Completed 200 OK in 2133ms (Views: 306.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:19:08 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (185.0ms)
+Rendered searches/create.html.haml within layouts/application (228.0ms)
+Completed 200 OK in 2785ms (Views: 267.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:22:30 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (2.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (8.0ms)
+Rendered searches/_results.html.haml (185.0ms)
+Rendered searches/create.html.haml within layouts/application (229.0ms)
+Completed 200 OK in 3111ms (Views: 270.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:22:35 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (190.0ms)
+Rendered searches/create.html.haml within layouts/application (234.0ms)
+Completed 200 OK in 1628ms (Views: 274.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:24:29 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (171.0ms)
+Rendered searches/create.html.haml within layouts/application (208.0ms)
+Completed   in 1465ms
+
+ActionView::Template::Error (undefined method `send_file' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:29:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml___339478450_21457680__27870721'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___863230645_22910484_871355369'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___863230645_22910484_871355369'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (151.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (180.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:26:54 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:26:57 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:26:57 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (173.0ms)
+Rendered searches/create.html.haml within layouts/application (209.0ms)
+Completed   in 1528ms
+
+ActionView::Template::Error (undefined method `send_file' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:29:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml___339478450_21411600__27870721'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___863230645_22888848_871355369'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___863230645_22888848_871355369'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (99.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (130.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:29:34 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (76.0ms)
+Completed 200 OK in 126ms (Views: 125.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:30:00 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:30:01 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (181.0ms)
+Rendered searches/create.html.haml within layouts/application (219.0ms)
+Completed   in 1431ms
+
+ActionView::Template::Error (undefined method `download' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:29:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml___152018671_22076424__600691053'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___982870065_23476476_355802853'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___982870065_23476476_355802853'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (132.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (169.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:33:56 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 72ms (Views: 72.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:33:59 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:33:59 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (4.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (172.0ms)
+Rendered searches/create.html.haml within layouts/application (210.0ms)
+Completed   in 1404ms
+
+ActionView::Template::Error (undefined method `download' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:29:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml___152018671_21966348__600691053'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___982870065_23444568_355802853'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___982870065_23444568_355802853'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (94.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (121.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:36:44 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 73ms (Views: 73.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:36:53 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:36:53 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (4.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (173.0ms)
+Rendered searches/create.html.haml within layouts/application (212.0ms)
+Completed   in 1407ms
+
+ActionView::Template::Error (undefined method `download' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:30:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml__378520187_21985836__185093422'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml__948018223_23509956__796450964'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml__948018223_23509956__796450964'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (106.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (134.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:37:50 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (176.0ms)
+Rendered searches/create.html.haml within layouts/application (215.0ms)
+Completed   in 1452ms
+
+ActionView::Template::Error (undefined method `download' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:30:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml__378520187_22092984__185093422'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml__948018223_23669520__796450964'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml__948018223_23669520__796450964'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (97.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (124.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:40:06 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 104ms (Views: 103.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:40:16 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:40:16 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (187.0ms)
+Rendered searches/create.html.haml within layouts/application (224.0ms)
+Completed   in 1449ms
+
+ActionView::Template::Error (undefined method `send_file' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:30:in `createPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml___325895544_22000620__967644822'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___952512177_23595408_38265924'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___952512177_23595408_38265924'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (110.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (136.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:44:31 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/index.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 100ms (Views: 99.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:44:41 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:44:41 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+ERROR: compiling _app_views_searches__results_html_haml__172859248_21994164_25401077 RAISED C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:6: syntax error, unexpected '\n', expecting tASSOC
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: unknown regexp options - th
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected $undefined
+...<tr>\n    <th>Document ID</th>\n    <th>Applicant</th>\n    ...
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: unknown regexp options - th
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected $undefined
+...h>\n    <th>Priority Date</th>\n    <th>First Page Image</th...
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+...y Date</th>\n    <th>First Page Image</th>\n  </tr>\n", 0, f...
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: unknown regexp options - tr
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected $undefined
+...First Page Image</th>\n  </tr>\n", 0, false);
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:17: syntax error, unexpected $undefined
+_hamlout.push_text("  <tr>\n    <td>#{
+                           ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:19: syntax error, unexpected '}', expecting ')'
+));}</td>\n    <td>#{_hamlout.adj...
+    ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:20: unknown regexp options - td
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:20: syntax error, unexpected $undefined
+));}</td>\n    <td>#{_hamlout.adjust_ta...
+          ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:21: syntax error, unexpected ')'
+));}</td>\n    <td>an image</td>\n  </tr>\n", -1, false);
+ ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:21: unknown regexp options - td
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:21: syntax error, unexpected $undefined
+));}</td>\n    <td>an image</td>\n  </tr>\n", -1, false);
+                                 ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:24: unknown regexp options - tabl
+unmatched close parenthesis: /tr>\n", -1, false);
+
+
+end;end;_hamlout.push_text("</
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:24: syntax error, unexpected $undefined
+end;end;_hamlout.push_text("</table>\n#{
+                                     ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:28: syntax error, unexpected '}', expecting ')'
+));}\n", 0, false);::Haml::Util.h...
+    ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:28: unterminated string meets end of file
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:28: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_searches__results_html_haml__172859248_21994164_25401077(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "searches/_results";_old_output_buffer = @output_buffer;search = local_assigns[:search];results = local_assigns[:results];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<p>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false(("About #{@search.hits} results (#{@search.response_time} seconds)"
+));}</p>\n<p>\n  #{
+_hamlout.adjust_tabs(1); _hamlout.format_script_false_false_false_true_false_true_false(( "Showing #{@search.range} results for "
+));}\n  <b>\n    #{
+_hamlout.adjust_tabs(1); _hamlout.format_script_false_false_false_true_false_true_false((" #{@search.last_query}"
+));}\n  </b>\n  #{_hamlout.adjust_tabs(-1); _hamlout.format_script_false_false_false_true_false_true_false(( button_to "Export to Pdf", :action => Resultlist.createPdf, Resultlist.downloadPdf
+));}\n</p>\n<table class='calculator'>\n  <tr>\n    <th>Document ID</th>\n    <th>Applicant</th>\n    <th>Priority Date</th>\n    <th>First Page Image</th>\n  </tr>\n", 0, false);
+
+
+
+
+
+
+
+unless @search.results.nil?;
+_hamlout.append_if_string= @search.results.each do |result|;
+_hamlout.push_text("  <tr>\n    <td>#{
+_hamlout.adjust_tabs(2); _hamlout.format_script_false_true_false_true_false_true_false((result[:id]
+));}</td>\n    <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((result[:applicant]
+));}</td>\n    <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((result[:priority_date]
+));}</td>\n    <td>an image</td>\n  </tr>\n", -1, false);
+
+
+end;end;_hamlout.push_text("</table>\n#{
+
+
+_hamlout.adjust_tabs(-1); _hamlout.format_script_false_false_false_true_false_true_false((render :partial => "pagination", :locals => {:search => @search, :page => @page}
+));}\n", 0, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:333:in `render_partial'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:262:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:260:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:378:in `_render_partial'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:22:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:11:in `block in render_with_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers.rb:90:in `non_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:11:in `render_with_haml'
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___545446704_23561304_501936291'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:167:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:167:in `block (2 levels) in form_for_with_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers.rb:253:in `with_tabs'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:167:in `block in form_for_with_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/helpers/capture_helper.rb:172:in `with_output_buffer'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/xss_mods.rb:109:in `with_output_buffer_with_haml_xss'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/helpers/capture_helper.rb:40:in `capture'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:92:in `capture_with_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/helpers/form_helper.rb:545:in `fields_for'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/helpers/form_helper.rb:320:in `form_for'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:169:in `form_for_with_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/xss_mods.rb:132:in `form_for_with_haml_xss'
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___545446704_23561304_501936291'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:135:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/Ruby192/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/mime_responds.rb:192:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+C:/Users/hannes/Desktop/Work/patentsearch/app/controllers/searches_controller.rb:84:in `create'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__552926915__process_action__853397266__callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/haml-3.0.25/lib/sass/plugin/rack.rb:41:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+C:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+C:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+C:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered searches/_results.html.haml (7.0ms)
+Rendered searches/create.html.haml within layouts/application (42.0ms)
+Completed   in 1275ms
+
+ActionView::Template::Error (C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:6: syntax error, unexpected '\n', expecting tASSOC
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: unknown regexp options - th
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected $undefined
+...<tr>\n    <th>Document ID</th>\n    <th>Applicant</th>\n    ...
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: unknown regexp options - th
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected $undefined
+...h>\n    <th>Priority Date</th>\n    <th>First Page Image</th...
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+...y Date</th>\n    <th>First Page Image</th>\n  </tr>\n", 0, f...
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: unknown regexp options - tr
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:7: syntax error, unexpected $undefined
+...First Page Image</th>\n  </tr>\n", 0, false);
+...                               ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:17: syntax error, unexpected $undefined
+_hamlout.push_text("  <tr>\n    <td>#{
+                           ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:19: syntax error, unexpected '}', expecting ')'
+));}</td>\n    <td>#{_hamlout.adj...
+    ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:20: unknown regexp options - td
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:20: syntax error, unexpected $undefined
+));}</td>\n    <td>#{_hamlout.adjust_ta...
+          ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:21: syntax error, unexpected ')'
+));}</td>\n    <td>an image</td>\n  </tr>\n", -1, false);
+ ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:21: unknown regexp options - td
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:21: syntax error, unexpected $undefined
+));}</td>\n    <td>an image</td>\n  </tr>\n", -1, false);
+                                 ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:24: unknown regexp options - tabl
+unmatched close parenthesis: /tr>\n", -1, false);
+
+
+end;end;_hamlout.push_text("</
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:24: syntax error, unexpected $undefined
+end;end;_hamlout.push_text("</table>\n#{
+                                     ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:28: syntax error, unexpected '}', expecting ')'
+));}\n", 0, false);::Haml::Util.h...
+    ^
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:28: unterminated string meets end of file
+C:/Users/hannes/Desktop/Work/patentsearch/app/views/searches/_results.html.haml:28: syntax error, unexpected $end, expecting ')'):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.createPdf, Resultlist.downloadPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml___545446704_23561304_501936291'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml___545446704_23561304_501936291'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (54.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (109.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:50:08 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (2.0ms)
+Rendered searches/_form.html.haml (29.0ms)
+Rendered searches/index.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 100ms (Views: 100.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:50:25 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:50:26 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (7.0ms)
+Rendered searches/create.html.haml within layouts/application (47.0ms)
+Completed   in 1451ms
+
+ActionView::Template::Error (undefined method `send_file' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.downloadPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:34:in `downloadPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml___64503836_24476676_637625693'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml__621512366_26580300_198431883'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml__621512366_26580300_198431883'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (134.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (163.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 09:57:42 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (2.0ms)
+Rendered searches/_form.html.haml (30.0ms)
+Rendered searches/index.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 100ms (Views: 100.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 09:57:51 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:57:52 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (6.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_results.html.haml (5.0ms)
+Rendered searches/create.html.haml within layouts/application (51.0ms)
+Completed   in 2570ms
+
+ActionView::Template::Error (undefined method `send_file' for Resultlist:Class):
+    3:   = "Showing #{@search.range} results for "
+    4:   %b
+    5:     =" #{@search.last_query}"
+    6:   = button_to "Export to Pdf", :action => Resultlist.downloadPdf
+    7:   -#= paginate @search.results
+    8: %table.calculator
+    9:   %tr
+  lib/Resultlist.rb:33:in `downloadPdf'
+  app/views/searches/_results.html.haml:6:in `_app_views_searches__results_html_haml__1064958946_27522636__401453596'
+  app/views/searches/create.html.haml:7:in `block in _app_views_searches_create_html_haml__950680346_29004612__225633014'
+  app/views/searches/create.html.haml:4:in `_app_views_searches_create_html_haml__950680346_29004612__225633014'
+  app/controllers/searches_controller.rb:84:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (225.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (251.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 09:58:35 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 10:05:00 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/index.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 75ms (Views: 75.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 10:05:36 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:05:37 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (186.0ms)
+Rendered searches/create.html.haml within layouts/application (230.0ms)
+Completed 200 OK in 2108ms (Views: 269.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:05:41 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (6.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (196.0ms)
+Rendered searches/create.html.haml within layouts/application (246.0ms)
+Completed 200 OK in 2106ms (Views: 289.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:06:19 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (2.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (187.0ms)
+Rendered searches/create.html.haml within layouts/application (229.0ms)
+Completed 200 OK in 1964ms (Views: 271.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:06:22 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (2.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (194.0ms)
+Rendered searches/create.html.haml within layouts/application (237.0ms)
+Completed 200 OK in 2805ms (Views: 279.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:20:31 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (9.0ms)
+Rendered searches/_results.html.haml (190.0ms)
+Rendered searches/create.html.haml within layouts/application (235.0ms)
+Completed 200 OK in 2090ms (Views: 280.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 10:20:40 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 78ms (Views: 78.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 10:20:44 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:20:45 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (186.0ms)
+Rendered searches/create.html.haml within layouts/application (231.0ms)
+Completed 200 OK in 2078ms (Views: 272.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:20:48 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (8.0ms)
+Rendered searches/_results.html.haml (191.0ms)
+Rendered searches/create.html.haml within layouts/application (235.0ms)
+Completed 200 OK in 1988ms (Views: 277.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:23:34 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (191.0ms)
+Rendered searches/create.html.haml within layouts/application (236.0ms)
+Completed 200 OK in 1684ms (Views: 275.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:23:38 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (7.0ms)
+Rendered searches/_results.html.haml (190.0ms)
+Rendered searches/create.html.haml within layouts/application (235.0ms)
+Completed 200 OK in 1733ms (Views: 278.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 10:29:26 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 74ms (Views: 72.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 10:29:36 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:29:36 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Completed   in 1460ms
+
+NameError (uninitialized constant Search::Resultlist):
+  app/models/Search.rb:21:in `createList'
+  app/controllers/searches_controller.rb:67:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (92.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 10:31:51 +0200
+  Processing by SearchesController#index as HTML
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/index.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 75ms (Views: 74.0ms)
+
+
+Started POST "/crc_calculators/calculate" for 127.0.0.1 at 2011-08-24 10:32:02 +0200
+
+ActionController::RoutingError (No route matches "/crc_calculators/calculate"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:32:02 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (2.0ms)
+Rendered searches/_pagination.html.haml (9.0ms)
+Rendered searches/_results.html.haml (192.0ms)
+Rendered searches/create.html.haml within layouts/application (236.0ms)
+Completed 200 OK in 1670ms (Views: 276.0ms)
+
+
+Started POST "/searches" for 127.0.0.1 at 2011-08-24 10:32:06 +0200
+  Processing by SearchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c36jCsi9BsABPqHGBH2FwQIb+ohxwF4/vkHKVn0ilyE=", "search"=>{"query"=>"Google"}}
+showing page: 1
+Rendered shared/_errors_for.html.haml (3.0ms)
+Rendered searches/_form.html.haml (3.0ms)
+Rendered searches/_pagination.html.haml (6.0ms)
+Rendered searches/_results.html.haml (185.0ms)
+Rendered searches/create.html.haml within layouts/application (228.0ms)
+Completed 200 OK in 1653ms (Views: 268.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
